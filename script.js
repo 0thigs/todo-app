@@ -29,8 +29,6 @@ function getEl() {
     riskEl.setAttribute("onclick", `riskEl(${i})`)
     riskEl.setAttribute("class", "btnRisk")
 
-
-
     console.log(newEl)
 }
 
@@ -43,6 +41,3 @@ function riskEl(n) {
     let el = document.getElementById(n)
     el.style = "text-decoration: line-through;"
 }
-
-
-
