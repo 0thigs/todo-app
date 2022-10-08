@@ -76,9 +76,16 @@ main {
     text-align:center;
 }
 
+#btn-send:hover {
+    background: linear-gradient(#02db97, #07ae6e);
+}
+#btn-send:active {
+    background: linear-gradient(#02db97, #077d50);
+}
+
 .newEls {
     display: flex;
-    justify-content: start;
+    justify-content: space-between;
     align-items: center;
     font-family: 'IBM Plex Sans Arabic', sans-serif;
     padding: 10px;
@@ -153,4 +160,8 @@ main {
 .todo-c {
     overflow-y: scroll;
     height: 400px;
+}
+
+.riskANDunrisk {
+    text-decoration: line-through;
 }

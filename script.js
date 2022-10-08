@@ -9,23 +9,27 @@ function getEl() {
     const newEl = document.createElement("p")
     const exEl = document.createElement("button") 
     const riskEl = document.createElement("button")
-
+    const div = document.createElement("div")
 
     //new El
     newEl.innerHTML = `&middot${textareaVal}`;
     oldEl.appendChild(newEl);
     newEl.setAttribute("class", "newEls");
     newEl.setAttribute("id", i)
+
+    //div EL
+    newEl.appendChild(div);
+    div.setAttribute("class", "container-div")
     
     //Ex El
-    exEl.innerHTML = "X"
-    newEl.appendChild(exEl)
+    exEl.innerHTML = "Delete"
+    div.appendChild(exEl)
     exEl.setAttribute("onclick", `exEl(${i})`)
     exEl.setAttribute("class", "btnEx")
 
     //risk El
     riskEl.innerHTML = "Risk"
-    newEl.appendChild(riskEl)
+    div.appendChild(riskEl)
     riskEl.setAttribute("onclick", `riskEl(${i})`)
     riskEl.setAttribute("class", "btnRisk")
 
@@ -39,5 +43,5 @@ function exEl(n) {
 
 function riskEl(n) {
     let el = document.getElementById(n)
-    el.style = "text-decoration: line-through;"
+    el.classList.toggle("riskANDunrisk")
 }
